@@ -136,3 +136,21 @@ async function loadAndProcessData() {
 
 // Вызываем функцию загрузки данных при загрузке страницы
 document.addEventListener('DOMContentLoaded', loadAndProcessData);
+
+// Show popup notification
+const showPopup = (message, type = 'success') => {
+    const popup = document.createElement('div');
+    popup.className = 'popup-message';
+    popup.textContent = message;
+    
+    if (type === 'error') {
+        popup.style.backgroundColor = '#d32f2f';
+    }
+    
+    document.body.appendChild(popup);
+    setTimeout(() => {
+        if (popup.parentNode) {
+            popup.parentNode.removeChild(popup);
+        }
+    }, 2500);
+};
