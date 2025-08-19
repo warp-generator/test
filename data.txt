@@ -1,2 +1,1 @@
-[10.10.10][100][ermaozi][https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
-
+[10.10.10][5][ermaozi][https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
