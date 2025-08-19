@@ -12,4 +12,5 @@
 [-][2][hideshots.eu][https://hideshots.eu/sub.txt]
 [-][28][vpn.fail][https://vpn.fail/free-proxy/v2ray]
 [-][1937][istanbulsydneyhotel.com][https://istanbulsydneyhotel.com/blogs/site/sni.php]
+[-][-][freefq][https://raw.githubusercontent.com/freefq/free/refs/heads/master/v2]
 #[-][-][][]
