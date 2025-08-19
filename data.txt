@@ -10,6 +10,6 @@
 [18.08.25][3227][shabane][https://raw.githubusercontent.com/shabane/kamaji/master/hub/merged.txt]
 [19.08.25][573][wuqb2i4f][https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/main/output/base64/mix-uri]
 [-][2][hideshots.eu][https://hideshots.eu/sub.txt]
-[-][29][vpn.fail][https://vpn.fail/free-proxy/v2ray]
+[-][28][vpn.fail][https://vpn.fail/free-proxy/v2ray]
 [-][1937][istanbulsydneyhotel.com][https://istanbulsydneyhotel.com/blogs/site/sni.php]
 #[-][-][][]
