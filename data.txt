@@ -1,1 +1,2 @@
-[ДАТА][СЕРВЕРА][ermaozi][https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
+[ДАТА][СЕРВЕРА][ermaozi][https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]{https://github.com/ermaozi/get_subscribe/blob/main/subscribe/v2ray.txt}
+
