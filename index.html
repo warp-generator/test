@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агрегатор подписок</title>
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+<div class="container">
+    <button id="telegramButton"><span class="button__text">Другие проекты</span></button>
+    <button id="promoButton" class="glow-on-hover"><span class="button__text">Amnezia <a style="color: #A40059">Premium<a></span></button>
+    <button id="BoostyButton"><span class="button__text">Поддержать автора</span></button>
+    <div id="newButtons">
+        <button id="DonationAlertsButton"><span class="button__text">CloudTips</span></button>
+        <button id="BoostyNewButton"><span class="button__text">Boosty</span></button>
+    </div>
+</div>
+<div id="firstFilter" class="filter-switch">
+  <input checked="" id="option1" name="options" type="radio" />
+  <label class="option" for="option1">По дате</label>
+  <input id="option2" name="options" type="radio" />
+  <label class="option" for="option2">По серверам</label>
+  <span class="background"></span>
+</div>
+<div class="grid-container" id="cardsContainer">
+</div></div>
+</body>
+</html>

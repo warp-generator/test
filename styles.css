@@ -1,0 +1,390 @@
+body {
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #232328;
+    font-family: 'Roboto', sans-serif;
+    width: 100%; /* Занимает всю ширину */
+    margin: 0; /* Убираем отступы */
+}
+.container {
+    
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    text-align: center; /* Центрируем текст внутри элементов */
+    width: 100%;
+    max-width: 700px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер на странице */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    gap: 20px; /* Расстояние между контейнерами */
+    width: 85%;
+    max-width: 900px; /* Увеличиваем максимальную ширину, чтобы вместить два контейнера */
+    margin: 20px auto 20px; /* Центрируем и добавляем отступ снизу */
+	background-color: #3a3c4c59;
+    padding: 20px
+}
+
+
+
+
+
+.header {
+    display: flex;
+    justify-content: center; /* Выравниваем по центру */
+    align-items: center;
+    margin-bottom: 10px; /* Отступ снизу */
+    width: 100%; /* Занимает всю ширину */
+    max-width: 400px; /* Ограничиваем ширину, как у контейнера */\
+}
+
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+#telegramButton,#BoostyButton,#githubButton,#DonationAlertsButton,#BoostyNewButton {
+    background: linear-gradient(90deg, #2a3797, #0d87d2);
+	width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#newButtons {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease, visibility 0.5s ease;
+}
+
+#newButtons.show {
+    visibility: visible;
+    opacity: 1;
+    height: 120px; /* Фиксированная высота для плавной анимации */
+}	
+
+
+
+
+
+
+.glow-on-hover {
+    width: 400px;
+	max-width: 90%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+	margin: 10px auto;
+}
+
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.close {
+    color: #aaa;
+
+	position: absolute;
+	right: 10px;
+	top: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.info-button {
+  padding: 0;
+position: relative;
+margin: 0px;
+margin-left:-25px;
+left: 55px;
+bottom: 5px;
+  color: black;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  
+}
+
+.info-button:hover {
+transform: none;
+    box-shadow: none;
+}
+
+.settings-btn {
+  display: block;
+  transition: transform 0.4s ease;
+}
+.settings-btn:hover {
+  transform: rotate(60deg);
+}
+
+}
+@keyframes rot {
+  from {
+    transform: rotate(-100deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+#info1 {padding-bottom: 10px}
+#info2 {
+	font-size: 15px;
+	padding-top: 10px;
+	text-align: center;}
+
+button, 
+input, 
+textarea, 
+select,
+label,
+.toggle-switch {
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+      user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;	
+}  
+
+.popup-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 2.5s forwards;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -20px); }
+    15% { opacity: 1; transform: translate(-50%, 0); }
+    85% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -20px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0}
+    15% { opacity: 1}
+}
+
+
+/* From Uiverse.io by Xtenso */ 
+.filter-switch {
+    border: 2px solid #2B2C35;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    scale: 80%;
+    margin-bottom: -38px;
+    background-color: #2B2C35;
+}
+.filter-switch input {
+  display: none;
+}
+.filter-switch label {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s;
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: bold;
+}
+.filter-switch .background {
+  position: absolute;
+  width: 49%;
+  height: 38px;
+  background-color: #bfbfbf;
+  left: 4px;
+  border-radius: 2px;
+  transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#option2:checked ~ .background {
+  left: 50%;
+}
+#option1:checked + label[for="option1"] {
+  color: #212121;
+}
+#option2:checked + label[for="option2"] {
+  color: #212121;
+}
+#option1:not(:checked) + label[for="option1"],
+#option2:not(:checked) + label[for="option2"] {
+  color: #7d7d7d;
+}
+
+
+button{width:100%;padding:10px 20px;font-size:18px;color:white;border:none;border-radius:5px;cursor:pointer;transition:background 0.3s ease, transform 0.2s ease;}
+button:disabled{cursor:not-allowed;opacity:0.7;}
+button,input{-webkit-tap-highlight-color:transparent;outline:none!important;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;}
+.anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+:where(.css-1tf2gzb).ant-card{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}
+:where(.css-1tf2gzb).ant-card{box-sizing:border-box;margin:0;padding:0;color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:relative;background:#3A3C4C;border-radius:2px;}
+:where(.css-1tf2gzb).ant-card .ant-card-head{display:flex;justify-content:center;flex-direction:column;min-height:56px;margin-bottom:-1px;padding:0 24px;color:rgba(255,255,255,0.85);font-weight:600;font-size:16px;background:transparent;border-bottom:1px solid #303030;border-radius:8px 8px 0 0;}
+:where(.css-1tf2gzb).ant-card .ant-card-head-wrapper{width:100%;display:flex;align-items:center;}
+:where(.css-1tf2gzb).ant-card .ant-card-head-title{display:inline-block;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+:where(.css-1tf2gzb).ant-card .ant-card-extra{    border-radius: 2px;
+    margin-inline-start: auto;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: normal;
+    background-color: #282a36;
+    font-size: 14px;
+    padding: 5px;
+    border-color: #424242;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+    border-style: solid;}
+:where(.css-1tf2gzb).ant-card-bordered{box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);}
+:where(.css-1tf2gzb).ant-card-small >.ant-card-head{min-height:47px;padding:0 12px;font-size:14px;}
+:where(.css-1tf2gzb).ant-card-small >.ant-card-head >.ant-card-head-wrapper >.ant-card-extra{font-size:14px;
+    min-width: 40px;
+    text-align: center;}
+:where(.css-1tf2gzb).ant-card-small >.ant-card-body{padding:12px;}
+:where(.css-1tf2gzb).ant-btn{outline:none;position:relative;display:inline-flex;gap:8px;align-items:center;justify-content:center;font-weight:400;white-space:nowrap;text-align:center;background-image:none;background:transparent;border:1px solid transparent;cursor:pointer;transition:all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);user-select:none;touch-action:manipulation;color:rgba(255,255,255,0.85);}
+:where(.css-1tf2gzb).ant-btn:disabled>*{pointer-events:none;}
+:where(.css-1tf2gzb).ant-btn.ant-btn-icon-only{padding-inline:0;}
+:where(.css-1tf2gzb).ant-btn{font-size:14px;height:32px;padding:0px 15px;border-radius:6px;}
+:where(.css-1tf2gzb).ant-btn.ant-btn-icon-only{width:32px;}
+:where(.css-1tf2gzb).ant-btn.ant-btn-icon-only .anticon{font-size:inherit;}
+:where(.css-1tf2gzb).ant-btn-color-default{color:rgba(255,255,255,0.85);box-shadow:0 2px 0 rgba(255,255,255,0.04);}
+:where(.css-1tf2gzb).ant-btn-variant-outlined{border-color:#424242;background:#282A36;box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.1);}
+:where(.css-1tf2gzb).ant-btn-variant-outlined:disabled{cursor:not-allowed;border-color:#424242;color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.08);box-shadow:none;}
+:where(.css-1tf2gzb).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover{color:#3c89e8;border-color:#3c89e8;background:#242631;}
+:where(.css-1tf2gzb).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):active{color:#1554ad;border-color:#1554ad;background:#141414;}
+:where(.css-1tf2gzb).ant-input{box-sizing:border-box;margin:0;padding:4px 11px;color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:relative;display:inline-block;width:100%;min-width:0;border-radius:6px;transition:all 0.2s;}
+:where(.css-1tf2gzb).ant-input::placeholder{color:rgba(255,255,255,0.25);user-select:none;}
+:where(.css-1tf2gzb).ant-input-outlined{background:#282A36;border-width:1px;border-style:solid;border-color:#424242;box-shadow:inset 0 4px 8px rgba(0, 0, 0, 0.1);}
+:where(.css-1tf2gzb).ant-input-outlined:hover{border-color:#3c89e8;background-color:#242631;}
+:where(.css-1tf2gzb).ant-input-outlined:focus{border-color:#1668dc;box-shadow:0 0 0 2px rgba(0,60,180,0.15);outline:0;background-color:#141414;}
+.anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.anticon >*{line-height:1;}
+
+
+
+@media (max-width: 700px) {
+	.Sites {grid-template-columns: repeat(2, minmax(0, 1fr))}
+	.dnsinfo {grid-template-columns: repeat(1, minmax(0, 1fr))}
+	.modal-content {
+    max-width: 346px;
+	min-width: 80%;
+	}	
+	
+	#throne {display:none}
+	#logo {max-width: 90%}   
+	#telegramButton,#BoostyButton,#githubButton,#DonationAlertsButton,#BoostyNewButton {
+    max-width: 90%;
+	width: 400px;
+}
+
+
+	
+	.grid-container {grid-template-columns: 1fr}
+	#info {
+		display: block;
+		max-width: 90%;
+	}
+	
+    #status {display: none}
+	.containerClash {order: 3}
+    .containerAWG:nth-of-type(4) {order: 2}
+	.containerAWG:nth-of-type(2) {margin-bottom: 60px;}	
+}
+		
+    
