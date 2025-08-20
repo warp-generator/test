@@ -20,5 +20,5 @@
 [20.08.25][200][mahdibland][https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity]
 [20.08.25][423][aiboboxx][https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2]
 [20.08.25][62][Pawdroid][https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
-[17.08.25][960][AzadNetCH][https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet.txt]
+%[17.08.25][960][AzadNetCH][https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet.txt]
 #[-][-][][]
